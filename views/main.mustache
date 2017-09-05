@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Main</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ol>
+        <a href="home"><p>Home</p></a>
+        <a href="add"><p>Add Snippet</p></a>
+      <ol>
+    </nav>
+  </header>
+
+  <main>
+    <h1> Let's get ready to snippet! </h1>
+    <section class="search">
+      <form method="post" action="/search">
+          <select name="select" id="select">
+            <option value="All Snippets">All Snippets</option>
+            <option value="language">Language</option>
+            <option value="tags">Tags</option>
+          </select>
+          <input type="text" name="searchKey" placeholder="Keyword">
+          <input type="submit" value="Search">
+      </form>
+    </section>
+
+    <section class="display">
+      <ul>
+        {{ #snippets }}
+          <a href="/display/{{ _id }}">
+            <li>
+            <p> {{ title }}</p>
+            <p> {{ language }} </p>
+            </li>
+         </a>
+        {{ /snippets }}
+      </ul>
+    </section>
+
+
+  </main>
+</body>
+
+</html>

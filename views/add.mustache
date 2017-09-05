@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Add Snippet</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ol>
+        <a href="home"><p>Home</p></a>
+        <a href="add"><p>Add Snippet</p></a>
+      <ol>
+    </nav>
+  </header>
+
+  <main>
+      <form method="post" action="/add">
+          <label>Title:</label>
+          <input type="text" name="title">
+          <br>
+          <label>Code:</label>
+          <textarea name="code" rows="15" cols="50"></textarea>
+          <br>
+          <label>Notes:</label>
+          <textarea name="notes" rows="15" cols="50"></textarea>
+          <br>
+          <label>Language:</label>
+          <input type="text" name="language">
+          <br>
+          <label>Tags:</label>
+          <input type="text" name="tags">
+          <input type="submit" value="Add">
+      </form>
+  </main>
+</body>
+
+</html>
